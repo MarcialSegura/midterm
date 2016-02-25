@@ -1,3 +1,4 @@
+#MarcialSegura
 # This is a very simple game of sticks. There are 21 sticks, first the user picks number of sticks between 1-4, then the computer picks sticks(1-4). Who ever will pick the last stick will lose.
 # Look for the TODO blocks as an indication of when you have to add your own code.
 
@@ -26,15 +27,43 @@ def askUserChoice():
     # 1. Asks the user to enter their input (between 1 and 4)
     # 2. Checks that the user's input is valid. If it's not valid (if it's not between 1 and 4), then ask the user to re-enter their input.
     # 3. Once the user enters a valid input, return that input as an integer.
-
-
+    while True:
+        print('You can pick up 1-4 sticks. Choose how many you want.')
+        num = input()
+        if int(num) == 1:
+            return int(num)
+            break
+        elif int(num) == 2:
+            return int(num)
+            break
+        elif int(num) == 3:
+            return int(num)
+            break
+        elif int(num) == 4:
+            return int(num)
+            break
+        else:
+            print('Invalid: Number needs to be between 1 and 4.')
+           global sticks
+           
 def subtractSticks( number ):
-    global sticks 
-    
+    global sticks
+
+
+
     # TODO: write code inside this function that:
     # 1. subtracts the parameter `number` from the global variable `sticks`
     # 2. checks if the number subtracted resulted in the last stick, if so, return True
     # 3. if there are still sticks left, return False
+    sticks = sticks - number
+    if sticks <= 0:
+        return True
+    else:
+        return False
+
+
     
 def determineComputerChoice():
+    num = random.randint(1,4)
+    return int(num)
     # TODO: write code inside this function that returns an integer between 1 and 4, random chosen by the computer
