@@ -22,6 +22,7 @@ def playGame():
             break
         
 
+
 def askUserChoice():
     # TODO: write code in this functiont that:
     # 1. Asks the user to enter their input (between 1 and 4)
@@ -43,18 +44,15 @@ def askUserChoice():
             return int(num)
             break
         else:
-            print('Invalid: Number needs to be between 1 and 4.')
-           global sticks
-           
-def subtractSticks( number ):
-    global sticks
-
-
+            print('Invalid: Number needs to be between 1 and 4.')          
 
     # TODO: write code inside this function that:
     # 1. subtracts the parameter `number` from the global variable `sticks`
     # 2. checks if the number subtracted resulted in the last stick, if so, return True
     # 3. if there are still sticks left, return False
+def subtractSticks( number ):
+    global sticks
+    int(number)
     sticks = sticks - number
     if sticks <= 0:
         return True
